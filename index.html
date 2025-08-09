@@ -6,6 +6,10 @@
     <title>TonePersonalStyling</title>
     <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav
@@ -188,6 +192,108 @@
       </div>
     </section>
 
+    <section class="bg-gray-50 py-16 px-6">
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <h2
+          class="text-2xl md:text-3xl font-serif font-extrabold text-gray-900 mb-4 tracking-wide leading-tight"
+        >
+          What Our Clients Say
+        </h2>
+        <p
+          class="text-gray-600 font-serif text-base md:text-lg max-w-xl mx-auto tracking-wide leading-relaxed"
+        >
+          Hear from the amazing women we’ve helped transform their style.
+        </p>
+      </div>
+
+      <div class="relative max-w-3xl mx-auto">
+        <!-- Testimonials container -->
+        <div id="testimonial-wrapper" class="overflow-hidden relative">
+          <div
+            class="flex transition-transform duration-500"
+            style="transform: translateX(0%)"
+          >
+            <!-- Slide 1 -->
+            <div class="min-w-full px-6">
+              <blockquote
+                class="text-gray-800 italic text-lg md:text-xl leading-relaxed"
+                style="font-family: 'Playfair Display', serif"
+              >
+                “Thanks to TonePersonalStyling, I finally feel confident in my
+                wardrobe. Their personalized advice helped me find my unique
+                style!”
+              </blockquote>
+
+              <p class="mt-6 font-semibold text-gray-900">Jessica Parker</p>
+              <p class="text-gray-600 text-sm">Entrepreneur</p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="min-w-full px-6">
+              <blockquote
+                class="text-gray-800 italic text-lg md:text-xl leading-relaxed"
+                style="font-family: 'Playfair Display', serif"
+              >
+                “I love how they understand my taste and guide me to make bold,
+                yet elegant choices. A game changer for my style!”
+              </blockquote>
+              <p class="mt-6 font-semibold text-gray-900">Emily Johnson</p>
+              <p class="text-gray-600 text-sm">Fashion Blogger</p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="min-w-full px-6">
+              <blockquote
+                class="text-gray-800 italic text-lg md:text-xl leading-relaxed"
+                style="font-family: 'Playfair Display', serif"
+              >
+                “Their expert advice made shopping effortless and enjoyable.
+                I've never felt better about my look!”
+              </blockquote>
+              <p class="mt-6 font-semibold text-gray-900">Sophia Lee</p>
+              <p class="text-gray-600 text-sm">Marketing Specialist</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrows -->
+        <button
+          id="prevBtn"
+          aria-label="Previous testimonial"
+          class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-md"
+        >
+          <svg
+            class="w-6 h-6 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 24 24"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button
+          id="nextBtn"
+          aria-label="Next testimonial"
+          class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-md"
+        >
+          <svg
+            class="w-6 h-6 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 24 24"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
     <footer class="bg-black text-gray-300 py-12">
       <div
         class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start space-y-8 md:space-y-0"
@@ -281,5 +387,26 @@
         transition-property: max-height;
       }
     </style>
+    <script>
+      const wrapper = document.querySelector("#testimonial-wrapper > div");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const totalSlides = wrapper.children.length;
+      let currentIndex = 0;
+
+      function updateSlider() {
+        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+      });
+    </script>
   </body>
 </html>
