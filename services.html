@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TonePersonalStyling | Services</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Tailwind doesn't have transition for max-height by default */
+      .transition-max-height {
+        transition-property: max-height;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Navbar (matches existing pages) -->
+    <nav
+      class="bg-black text-white px-6 py-4 flex items-center justify-between relative"
+    >
+      <!-- Logo (left) -->
+      <div class="text-xl font-bold flex-1">
+        <img
+          src="assets/logo.png"
+          alt="TonePersonalStyling Logo"
+          class="w-10"
+        />
+      </div>
+
+      <!-- Title (center) -->
+      <div
+        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 font-serif text-lg md:text-xl font-semibold"
+        style="font-family: 'Playfair Display', serif"
+      >
+        TonePersonalStyling
+      </div>
+
+      <!-- Menu (right on md+, hidden on small) -->
+      <ul id="menu" class="hidden md:flex space-x-8 flex-1 justify-end">
+        <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
+        <li><a href="/about.html" class="hover:text-gray-400">About</a></li>
+        <li>
+          <a href="/services.html" class="hover:text-gray-400">Services</a>
+        </li>
+        <li>
+          <a href="/contactUs.html" class="hover:text-gray-400">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Hamburger Icon (right on small screens) -->
+      <button
+        id="menu-btn"
+        class="md:hidden focus:outline-none z-10"
+        aria-label="Toggle menu"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu with transition -->
+    <div
+      id="mobile-menu"
+      class="overflow-hidden max-h-0 bg-black text-white px-6 transition-max-height duration-300 ease-in-out md:hidden"
+    >
+      <ul class="flex flex-col space-y-4 py-4">
+        <li>
+          <a href="/index.html" class="block hover:text-gray-400">Home</a>
+        </li>
+        <li>
+          <a href="/about.html" class="block hover:text-gray-400">About</a>
+        </li>
+        <li>
+          <a href="/services.html" class="block hover:text-gray-400"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="/contactUs.html" class="block hover:text-gray-400"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero (matches your style: full-width image + dark overlay + centered text) -->
+    <main>
+      <div class="relative w-full h-auto md:h-[75vh] overflow-hidden">
+        <img
+          src="assets/about-banner.jpg"
+          alt="Services Banner"
+          class="w-full h-full object-cover object-top"
+        />
+        <div
+          class="absolute inset-0 flex items-end justify-center bg-black bg-opacity-50 p-6"
+        >
+          <p
+            class="text-white text-center md:text-xl max-w-xs md:max-w-xl mx-auto font-serif mt-12 mb-4 md:mb-10"
+            style="font-family: 'Playfair Display', serif"
+          >
+            Tailored styling services that elevate confidence and celebrate
+            individuality.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Service 1: Personal Styling & Image Consultant -->
+    <section class="max-w-6xl mx-auto px-6 py-12">
+      <div class="flex flex-col items-center justify-center pb-6">
+        <h2
+          class="font-serif text-2xl md:text-3xl font-semibold mb-1"
+          style="font-family: 'Playfair Display', serif"
+        >
+          Personal Styling & Image Consultant
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate,
+          ratione?
+        </p>
+      </div>
+      <div class="flex flex-col md:flex-row items-stretch relative">
+        <!-- Left Text with transparent white box -->
+        <div class="md:w-1/2 flex flex-col justify-center relative z-10">
+          <div
+            class="bg-white bg-opacity-70 p-6 sm:rounded shadow-lg md:-mr-24"
+          >
+            <p class="text-gray-900 md:text-lg lg:text-xl md:p-2">
+              As a personal styling and image consultant, our role is to help
+              individuals discover their personal style and enhance their image.
+              We provide expert advice on fashion, beauty, and grooming,
+              tailoring our guidance to each client's unique needs, preferences,
+              and goals. Whether it's updating a wardrobe, preparing for a
+              special occasion, or simply boosting confidence, we're here to
+              empower clients to look and feel their best.
+            </p>
+            <a
+              href="/contactUs.html"
+              class="inline-block text-gray-700 border-2 border-gray-600 hover:bg-black hover:text-white rounded px-6 py-3 text-sm font-bold tracking-wider transition duration-300 mt-6"
+            >
+              BOOK A CONSULTATION
+            </a>
+          </div>
+        </div>
+        <!-- Right Image -->
+        <div class="md:w-1/2 mt-8 md:mt-0">
+          <img
+            src="assets/body1.jpeg"
+            alt="Personal Styling"
+            class="w-full h-auto sm:rounded shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Service 2: Wardrobe Consultant (alternate layout) -->
+    <section class="max-w-6xl mx-auto px-6 py-12">
+      <div class="flex flex-col items-center justify-center pb-6">
+        <h2
+          class="font-serif text-2xl md:text-3xl font-semibold"
+          style="font-family: 'Playfair Display', serif"
+        >
+          Wardrobe Consultant
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, fugit!
+        </p>
+      </div>
+      <div class="flex flex-col md:flex-row items-stretch relative">
+        <!-- Left Image -->
+        <div class="md:w-1/2">
+          <img
+            src="assets/about1.jpg"
+            alt="Wardrobe Consultant"
+            class="w-full h-auto sm:rounded shadow-lg"
+          />
+        </div>
+        <!-- Right Text with transparent white box -->
+        <div
+          class="md:w-1/2 flex flex-col justify-center relative z-10 mt-8 md:mt-0"
+        >
+          <div
+            class="bg-white bg-opacity-70 p-6 sm:rounded shadow-lg md:-ml-24"
+          >
+            <p class="text-gray-900 md:text-base lg:text-lg md:p-2">
+              As a wardrobe consultant, our role is to help individuals optimize
+              their wardrobe and personal style. We provide expert guidance on:
+            </p>
+            <ul class="list-disc list-inside text-gray-900 space-y-1 md:p-2">
+              <li>Wardrobe assessment and organization</li>
+              <li>Personal style development</li>
+              <li>Closet editing and curation</li>
+              <li>Shopping strategies</li>
+              <li>Outfit creation and styling</li>
+            </ul>
+            <p class="text-gray-900 md:text-base lg:text-lg md:p-2">
+              Our goal is to empower clients to look and feel confident, while
+              also making their wardrobe work more efficiently for their
+              lifestyle.
+            </p>
+            <a
+              href="/contactUs.html"
+              class="inline-block text-gray-700 border-2 border-gray-600 hover:bg-black hover:text-white rounded px-6 py-3 text-sm font-bold tracking-wider transition duration-300 mt-6"
+            >
+              START YOUR WARDROBE EDIT
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service 3: Personal Shopper -->
+    <section class="max-w-6xl mx-auto px-6 py-12 md:mt-5">
+      <div class="flex flex-col items-center justify-center pb-6">
+        <h2
+          class="font-serif text-2xl md:text-3xl font-semibold"
+          style="font-family: 'Playfair Display', serif"
+        >
+          Personal Shopper
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Exercitationem, soluta?
+        </p>
+      </div>
+      <div class="flex flex-col md:flex-row items-stretch relative">
+        <!-- Left Text with transparent white box -->
+        <div class="md:w-1/2 flex flex-col justify-center relative z-10">
+          <div
+            class="bg-white bg-opacity-70 p-6 sm:rounded shadow-lg md:-mr-24"
+          >
+            <p class="text-gray-900 md:text-lg lg:text-xl md:p-2">
+              As a personal shopper, our job is to provide personalized shopping
+              experiences for clients. We help them find the perfect
+              items—whether it's clothing or accessories—based on their style
+              and preferences. From selecting outfits to discovering unique
+              pieces, we offer expert guidance to make shopping easy, enjoyable,
+              and stress-free.
+            </p>
+            <a
+              href="/contactUs.html"
+              class="inline-block text-gray-700 border-2 border-gray-600 hover:bg-black hover:text-white rounded px-6 py-3 text-sm font-bold tracking-wider transition duration-300 mt-6"
+            >
+              PLAN A SHOPPING DAY
+            </a>
+          </div>
+        </div>
+        <!-- Right Image -->
+        <div class="md:w-1/2 mt-8 md:mt-0">
+          <img
+            src="assets/body3.jpg"
+            alt="Personal Shopper"
+            class="w-full h-auto sm:rounded shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (matches existing pages) -->
+    <footer class="bg-black text-gray-300 py-12">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start space-y-8 md:space-y-0"
+      >
+        <!-- Logo / Brand -->
+        <div class="flex items-center space-x-3">
+          <img src="assets/logo.png" alt="" class="w-10" />
+          <span class="text-white font-bold text-xl tracking-wide">
+            TonePersonalStyling
+          </span>
+        </div>
+
+        <!-- Navigation Links (centered) -->
+        <nav
+          class="flex flex-1 justify-center space-x-8 text-gray-400 text-sm font-semibold text-center"
+        >
+          <a href="/index.html" class="hover:text-white transition">Home</a>
+          <a href="/about.html" class="hover:text-white transition">About Us</a>
+          <a href="/contactUs.html" class="hover:text-white transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-6 text-gray-400">
+          <a href="#" aria-label="Facebook" class="hover:text-white transition">
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M22.675 0H1.325C.593 0 0 .592 0 1.324v21.352C0 23.408.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.408 24 22.676V1.324C24 .592 23.407 0 22.675 0z"
+              />
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter" class="hover:text-white transition">
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M23.954 4.569c-.885.389-1.83.654-2.825.775a4.935 4.935 0 002.163-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-8.384 4.482A13.95 13.95 0 011.671 3.149a4.902 4.902 0 001.523 6.56 4.903 4.903 0 01-2.228-.616c-.054 2.28 1.581 4.415 3.949 4.89a4.922 4.922 0 01-2.224.084 4.924 4.924 0 004.604 3.417 9.865 9.865 0 01-6.102 2.104c-.396 0-.787-.023-1.175-.068a13.945 13.945 0 007.557 2.209c9.054 0 14.004-7.496 14.004-13.986 0-.21-.006-.423-.015-.633A9.936 9.936 0 0024 4.59z"
+              />
+            </svg>
+          </a>
+          <a
+            href="#"
+            aria-label="Instagram"
+            class="hover:text-white transition"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.5-3a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center text-gray-500 text-xs">
+        &copy; 2025 TonePersonalStyling . All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Mobile menu JS (same behavior as other pages) -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        if (
+          mobileMenu.style.maxHeight &&
+          mobileMenu.style.maxHeight !== "0px"
+        ) {
+          mobileMenu.style.maxHeight = "0px";
+        } else {
+          mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+        }
+      });
+    </script>
+  </body>
+</html>
