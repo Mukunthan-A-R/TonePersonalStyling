@@ -68,25 +68,27 @@
     </div>
 
     <main>
-      <div class="relative w-full h-auto md:h-[75vh] overflow-hidden">
-        <img
-          src="assets/about-banner.jpg"
-          alt=""
-          class="w-full h-full object-cover object-top"
-        />
-        <div
-          class="absolute inset-0 flex items-end justify-center bg-black bg-opacity-50 p-6"
+      <div
+        class="relative w-full h-[75vh] md:h-[75vh] flex items-end justify-center bg-black bg-opacity-50"
+        style="
+          background-image: url('assets/contact-banner.jpeg');
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+        "
+      >
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <!-- optional overlay for readability -->
+        <p
+          class="relative text-white text-center md:text-xl max-w-xs md:max-w-md mx-auto font-serif mt-12 mb-4 md:mb-10 z-10"
         >
-          <p
-            class="text-white text-center md:text-xl max-w-xs md:max-w-md mx-auto font-serif mt-12 mb-4 md:mb-10"
-          >
-            I am from Italy, a country famous for creativity and style. I
-            appreciate beauty, quality, craftsmanship and I am committed to
-            empowering women.
-          </p>
-        </div>
+          I am from Italy, a country famous for creativity and style. I
+          appreciate beauty, quality, craftsmanship and I am committed to
+          empowering women.
+        </p>
       </div>
     </main>
+
     <section class="bg-white py-16 px-6">
       <div class="max-w-4xl mx-auto border border-black p-12 text-center">
         <p class="text-lg md:text-xl font-light leading-relaxed mb-8">
