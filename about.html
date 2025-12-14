@@ -11,36 +11,42 @@
     <nav
       class="bg-black text-white px-6 py-4 flex items-center justify-between relative"
     >
-      <!-- Logo (left) -->
-      <div class="text-xl font-bold flex-1">
-        <img src="assets/logo.png" alt="" class="w-10" />
+      <!-- Left: Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="assets/logo.png" alt="Logo" class="w-10" />
+        <span
+          class="hidden md:inline font-serif text-lg md:text-xl font-semibold"
+        >
+          ViswaPersonalStyling
+        </span>
       </div>
 
-      <!-- Title (center) -->
+      <!-- Center: Title (only on small screens, hidden on md+) -->
       <div
-        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 font-serif text-lg md:text-xl font-semibold"
+        class="md:hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 font-serif text-lg font-semibold"
       >
         ViswaPersonalStyling
       </div>
 
-      <!-- Menu (right on md+, hidden on small) -->
-      <ul id="menu" class="hidden md:flex space-x-8 flex-1 justify-end">
+      <!-- Right: Menu (flex on md+, hidden on small) -->
+      <ul id="menu" class="hidden md:flex space-x-8">
         <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
         <li><a href="/about.html" class="hover:text-gray-400">About</a></li>
-        <li><a href="#" class="hover:text-gray-400">Services</a></li>
+        <li>
+          <a href="/services.html" class="hover:text-gray-400">Services</a>
+        </li>
         <li>
           <a href="/contactUs.html" class="hover:text-gray-400">Contact</a>
         </li>
       </ul>
 
-      <!-- Hamburger Icon (right on small screens) -->
+      <!-- Hamburger Icon (small screens only) -->
       <button id="menu-btn" class="md:hidden focus:outline-none z-10">
         <svg
           class="w-6 h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             stroke-linecap="round"
@@ -52,7 +58,7 @@
       </button>
     </nav>
 
-    <!-- Mobile Menu with transition -->
+    <!-- Mobile Menu -->
     <div
       id="mobile-menu"
       class="overflow-hidden max-h-0 bg-black text-white px-6 transition-max-height duration-300 ease-in-out md:hidden"
@@ -64,7 +70,11 @@
         <li>
           <a href="/about.html" class="block hover:text-gray-400">About</a>
         </li>
-        <li><a href="#" class="block hover:text-gray-400">Services</a></li>
+        <li>
+          <a href="/services.html" class="block hover:text-gray-400"
+            >Services</a
+          >
+        </li>
         <li>
           <a href="/contactUs.html" class="block hover:text-gray-400"
             >Contact</a
@@ -241,4 +251,16 @@
       </div>
     </footer>
   </body>
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== "0px") {
+        mobileMenu.style.maxHeight = "0px";
+      } else {
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+      }
+    });
+  </script>
 </html>
