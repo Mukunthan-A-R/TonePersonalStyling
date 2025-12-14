@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TonePersonalStyling | Services</title>
+    <title>ViswaPersonalStyling | Services</title>
     <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -26,7 +26,7 @@
       <div class="text-xl font-bold flex-1">
         <img
           src="assets/logo.png"
-          alt="TonePersonalStyling Logo"
+          alt="ViswaPersonalStyling Logo"
           class="w-10"
         />
       </div>
@@ -36,7 +36,7 @@
         class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 font-serif text-lg md:text-xl font-semibold"
         style="font-family: 'Playfair Display', serif"
       >
-        TonePersonalStyling
+        ViswaPersonalStyling
       </div>
 
       <!-- Menu (right on md+, hidden on small) -->
@@ -101,12 +101,13 @@
 
     <!-- Hero (matches your style: full-width image + dark overlay + centered text) -->
     <main>
-      <div class="relative w-full h-auto md:h-[75vh] overflow-hidden">
+      <div class="relative w-full h-auto md:h-[85vh] overflow-hidden">
         <img
-          src="assets/about-banner.jpg"
+          src="assets/service-banner.jpeg"
           alt="Services Banner"
-          class="w-full h-full object-cover object-top"
+          class="w-full h-auto md:h-full object-contain md:object-cover object-center md:object-[center_-140px]"
         />
+
         <div
           class="absolute inset-0 flex items-end justify-center bg-black bg-opacity-50 p-6"
         >
@@ -114,8 +115,7 @@
             class="text-white text-center md:text-xl max-w-xs md:max-w-xl mx-auto font-serif mt-12 mb-4 md:mb-10"
             style="font-family: 'Playfair Display', serif"
           >
-            Tailored styling services that elevate confidence and celebrate
-            individuality.
+            Unleash Your Chic,"
           </p>
         </div>
       </div>
@@ -139,7 +139,7 @@
         <!-- Left Text with transparent white box -->
         <div class="md:w-1/2 flex flex-col justify-center relative z-10">
           <div
-            class="bg-white bg-opacity-70 p-6 sm:rounded shadow-lg md:-mr-24"
+            class="bg-white bg-opacity-70 p-6 sm:rounded shadow-lg md:-mr-24 border"
           >
             <p class="text-gray-900 md:text-lg lg:text-xl md:p-2">
               As a personal styling and image consultant, our role is to help
@@ -186,9 +186,9 @@
         <!-- Left Image -->
         <div class="md:w-1/2">
           <img
-            src="assets/about1.jpg"
+            src="assets/service-body2.jpeg"
             alt="Wardrobe Consultant"
-            class="w-full h-auto sm:rounded shadow-lg"
+            class="w-full h-auto sm:rounded shadow-lg mt-4"
           />
         </div>
         <!-- Right Text with transparent white box -->
@@ -196,7 +196,7 @@
           class="md:w-1/2 flex flex-col justify-center relative z-10 mt-8 md:mt-0"
         >
           <div
-            class="bg-white bg-opacity-70 p-6 sm:rounded shadow-lg md:-ml-24"
+            class="bg-white bg-opacity-70 p-6 sm:rounded shadow-xl border md:-ml-24"
           >
             <p class="text-gray-900 md:text-base lg:text-lg md:p-2">
               As a wardrobe consultant, our role is to help individuals optimize
@@ -243,7 +243,7 @@
         <!-- Left Text with transparent white box -->
         <div class="md:w-1/2 flex flex-col justify-center relative z-10">
           <div
-            class="bg-white bg-opacity-70 p-6 sm:rounded shadow-lg md:-mr-24"
+            class="bg-white bg-opacity-70 p-6 py-3 sm:rounded shadow-lg md:-mr-24 border"
           >
             <p class="text-gray-900 md:text-lg lg:text-xl md:p-2">
               As a personal shopper, our job is to provide personalized shopping
@@ -264,7 +264,7 @@
         <!-- Right Image -->
         <div class="md:w-1/2 mt-8 md:mt-0">
           <img
-            src="assets/body3.jpg"
+            src="assets/service-body3.jpeg"
             alt="Personal Shopper"
             class="w-full h-auto sm:rounded shadow-lg"
           />
@@ -273,122 +273,218 @@
     </section>
 
     <section class="max-w-6xl mx-auto px-6 py-12">
-      <!-- Section Header -->
-      <div class="text-center mb-8">
-        <h2
-          class="font-serif text-2xl md:text-3xl font-semibold text-gray-900"
-          style="font-family: 'Playfair Display', serif"
-        >
-          Why Choose Our Personal Shopper?
-        </h2>
-        <p class="text-gray-600 mt-2">
-          Explore the unique benefits of our personalized shopping service that
-          make your experience seamless and enjoyable.
-        </p>
-      </div>
-
       <!-- Accordion Component -->
-      <div class="space-y-4">
-        <!-- Accordion Item 1 -->
-        <div
-          class="border border-gray-300 rounded-lg overflow-hidden shadow-sm"
-        >
-          <button
-            class="w-full flex justify-between items-center px-5 py-4 text-left text-gray-800 font-medium bg-white hover:bg-gray-50 transition"
-            onclick="toggleAccordion(this)"
+      <section class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Section Header -->
+        <div class="text-center mb-8">
+          <h2
+            class="font-serif text-2xl md:text-3xl font-semibold text-gray-900"
+            style="font-family: 'Playfair Display', serif"
           >
-            <span>Personalized Styling</span>
-            <svg
-              class="w-5 h-5 text-gray-500 transform transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
+            Why Choose Our Personal Shopper?
+          </h2>
+          <p class="text-gray-600 mt-2">
+            Explore the unique benefits of our personalized shopping service
+            that make your experience seamless and enjoyable.
+          </p>
+        </div>
+
+        <!-- Accordion Component -->
+        <div class="space-y-4">
+          <!-- Accordion Item 1 -->
           <div
-            class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50 px-5"
+            class="border border-gray-300 rounded-lg overflow-hidden shadow-sm"
           >
-            <p class="py-4 text-gray-600">
-              Get outfits tailored to your unique style, preferences, and
-              lifestyle needs. We carefully handpick items that complement your
-              personality. lorem200
-            </p>
+            <button
+              class="w-full flex justify-between items-center px-5 py-4 text-left text-gray-800 font-medium bg-white hover:bg-gray-50 transition"
+              onclick="toggleAccordion(this)"
+            >
+              <span>Personalized Styling</span>
+              <svg
+                class="w-5 h-5 text-gray-500 transform transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              class="max-h-0 overflow-y-auto transition-all duration-300 bg-gray-50 px-5"
+              style="scroll-behavior: smooth; max-height: 0"
+            >
+              <p class="py-4 text-gray-600">
+                Our Personalized Styling service focuses on understanding your
+                unique style, body type, and preferences. We help you:
+              </p>
+              <ul class="pl-5 list-disc text-gray-600 pb-4 space-y-1">
+                <li>
+                  Identify your personal style – classic, trendy, bohemian, or
+                  minimalist.
+                </li>
+                <li>
+                  Assess your body type to determine flattering silhouettes and
+                  styles.
+                </li>
+                <li>
+                  Discover your color, pattern, and texture preferences to
+                  express your authentic self.
+                </li>
+                <li>
+                  Boost confidence by owning your style and incorporating trends
+                  that suit you.
+                </li>
+                <li>
+                  Enjoy the process of fashion as a form of self-expression.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div
+            class="border border-gray-300 rounded-lg overflow-hidden shadow-sm"
+          >
+            <button
+              class="w-full flex justify-between items-center px-5 py-4 text-left text-gray-800 font-medium bg-white hover:bg-gray-50 transition"
+              onclick="toggleAccordion(this)"
+            >
+              <span>Exclusive Access</span>
+              <svg
+                class="w-5 h-5 text-gray-500 transform transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              class="max-h-0 overflow-y-auto transition-all duration-300 bg-gray-50 px-5"
+              style="scroll-behavior: smooth; max-height: 0"
+            >
+              <p class="py-4 text-gray-600">
+                With our Exclusive Access service, you enjoy a premium shopping
+                experience tailored just for you:
+              </p>
+              <ul class="pl-5 list-disc text-gray-600 pb-4 space-y-1">
+                <li>
+                  Priority access to limited-edition collections and exclusive
+                  launches.
+                </li>
+                <li>
+                  Early notifications of new arrivals and curated fashion
+                  recommendations.
+                </li>
+                <li>
+                  Access to special promotions and offers before the public.
+                </li>
+                <li>
+                  Personalized suggestions that match your style and lifestyle.
+                </li>
+                <li>
+                  Enjoy a seamless and VIP shopping experience with expert
+                  guidance.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div
+            class="border border-gray-300 rounded-lg overflow-hidden shadow-sm"
+          >
+            <button
+              class="w-full flex justify-between items-center px-5 py-4 text-left text-gray-800 font-medium bg-white hover:bg-gray-50 transition"
+              onclick="toggleAccordion(this)"
+            >
+              <span>Stress-Free Shopping</span>
+              <svg
+                class="w-5 h-5 text-gray-500 transform transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              class="max-h-0 overflow-y-auto transition-all duration-300 bg-gray-50 px-5"
+              style="scroll-behavior: smooth; max-height: 0"
+            >
+              <p class="py-4 text-gray-600">
+                Our Stress-Free Shopping service ensures you get the perfect
+                items without the hassle:
+              </p>
+              <ul class="pl-5 list-disc text-gray-600 pb-4 space-y-1">
+                <li>
+                  We handle all shopping logistics, from finding sizes to
+                  selecting complete outfits.
+                </li>
+                <li>
+                  Receive personalized recommendations based on your style,
+                  preferences, and body type.
+                </li>
+                <li>
+                  Save time and energy while enjoying a curated selection of
+                  products.
+                </li>
+                <li>
+                  Guidance on coordinating outfits, accessories, and styling for
+                  every occasion.
+                </li>
+                <li>
+                  Focus on enjoying fashion while we take care of the details
+                  for you.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <!-- Accordion Item 2 -->
-        <div
-          class="border border-gray-300 rounded-lg overflow-hidden shadow-sm"
-        >
-          <button
-            class="w-full flex justify-between items-center px-5 py-4 text-left text-gray-800 font-medium bg-white hover:bg-gray-50 transition"
-            onclick="toggleAccordion(this)"
-          >
-            <span>Exclusive Access</span>
-            <svg
-              class="w-5 h-5 text-gray-500 transform transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-          <div
-            class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50 px-5"
-          >
-            <p class="py-4 text-gray-600">
-              Enjoy priority access to limited-edition collections, new
-              arrivals, and curated recommendations before anyone else.
-            </p>
-          </div>
-        </div>
+        <script>
+          function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector("svg");
 
-        <!-- Accordion Item 3 -->
-        <div
-          class="border border-gray-300 rounded-lg overflow-hidden shadow-sm"
-        >
-          <button
-            class="w-full flex justify-between items-center px-5 py-4 text-left text-gray-800 font-medium bg-white hover:bg-gray-50 transition"
-            onclick="toggleAccordion(this)"
-          >
-            <span>Stress-Free Shopping</span>
-            <svg
-              class="w-5 h-5 text-gray-500 transform transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-          <div
-            class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50 px-5"
-          >
-            <p class="py-4 text-gray-600">
-              Save time and energy while we handle everything—from finding the
-              right sizes to matching complete outfits perfectly.
-            </p>
-          </div>
-        </div>
-      </div>
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+              content.style.maxHeight = "0px";
+              icon.classList.remove("rotate-180");
+            } else {
+              // Close all accordions first
+              document
+                .querySelectorAll(".space-y-4 > div > div")
+                .forEach((el) => {
+                  el.style.maxHeight = "0px";
+                });
+              document
+                .querySelectorAll(".space-y-4 > div > button svg")
+                .forEach((el) => {
+                  el.classList.remove("rotate-180");
+                });
+
+              // Open the selected one
+              content.style.maxHeight = content.scrollHeight + "px";
+              icon.classList.add("rotate-180");
+            }
+          }
+        </script>
+      </section>
     </section>
 
     <!-- Footer (matches existing pages) -->
@@ -400,7 +496,7 @@
         <div class="flex items-center space-x-3">
           <img src="assets/logo.png" alt="" class="w-10" />
           <span class="text-white font-bold text-xl tracking-wide">
-            TonePersonalStyling
+            ViswaPersonalStyling
           </span>
         </div>
 
@@ -461,7 +557,7 @@
       </div>
 
       <div class="mt-10 text-center text-gray-500 text-xs">
-        &copy; 2025 TonePersonalStyling . All rights reserved.
+        &copy; 2025 ViswaPersonalStyling . All rights reserved.
       </div>
     </footer>
 
